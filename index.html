@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cryptography methods</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center mb-4">Cryptography</h1>
+        <div class="row">
+            <div class="col-sm-12 col-md-2">
+                <h2>Encryptors</h2>
+                <div class="row">
+                    <label for="encryptorSelect">Choose an encryptor</label>
+                    <select id="encryptorSelect" class="form-select">
+                        <option value="vigenere">Vigen&egrave;re Cipher</option>
+                        <option value="transposition">Transposition Cipher</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <button class="btn btn-primary mt-2" id="encryptButton">Add encryptor</button>
+                    <button class="btn btn-warning mt-2" id="removeEncryptorButton">Reset factory</button>
+                </div>
+                <h2>Factory</h2>
+                <div class="row">
+                    <div class="col" id="factoryBuild"></div>
+                </div>
+            </div>
+            <div class="col">
+                <h2 class="row"><label for="plaintext">Plaintext</label></h2>
+                <div class="row">
+                    <textarea id="plaintext" class="form-control" rows="10"></textarea>
+                </div>
+                <div class="row">
+                    <button class="btn btn-primary mt-2" id="encryptTextButton">Encrypt</button>
+                </div>
+                <h2 class="row"><label for="ciphertext">Ciphertext</label></h2>
+                <div class="row">
+                    <textarea id="ciphertext" class="form-control" rows="10"></textarea>
+                </div>
+                <div class="row">
+                    <button class="btn btn-primary mt-2" id="decryptTextButton">Decrypt</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            Caveat the first: Never use this for real encryption, it's just a demonstration of how these methods work.
+            Caveat the second: Never implement your own cryptography methods unless you're a post-valley-of-ignorance expert.
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <script type="module" src="js/index.mjs"></script>
+</body>
+</html>

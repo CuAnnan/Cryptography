@@ -5,6 +5,11 @@ class EncryptionFactory
         this.encryptors = [];
     }
 
+    get hasEncryptors()
+    {
+        return !!this.encryptors.length;
+    }
+
     registerEncryptor(encryptor)
     {
         this.encryptors.push(encryptor);

@@ -1,13 +1,21 @@
+import KeyBasedEncryptor from "./KeyBasedEncryptor.mjs";
+
 const encryptable='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789.,;:!?()[]{}<>@#$%^&*+-=_~|/\\\'"';
 
-class Vigenere
+class Vigenere extends KeyBasedEncryptor
 {
     #key;
     #instantiated;
 
     constructor()
     {
+        super();
         this.#instantiated = false;
+    }
+
+    get name()
+    {
+        return "Vigenere Cipher";
     }
 
     setKey(key)

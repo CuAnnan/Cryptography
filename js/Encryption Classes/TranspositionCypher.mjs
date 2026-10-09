@@ -1,7 +1,15 @@
-class TranspositionCypher
+import Encryptor from "./Encryptor.mjs";
+
+class TranspositionCypher extends Encryptor
 {
     constructor()
     {
+        super();
+    }
+
+    get name()
+    {
+        return "Transposition Cypher";
     }
 
     generateTextGrid(plaintext)
